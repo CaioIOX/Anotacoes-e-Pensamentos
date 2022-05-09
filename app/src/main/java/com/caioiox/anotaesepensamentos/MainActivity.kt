@@ -9,11 +9,13 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.caioiox.anotaesepensamentos.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var adapter: NoteAdapter
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,10 +23,15 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.toolbar)
 
         binding.fab.setOnClickListener { NewNote().show(supportFragmentManager, "") }
+
+        adapter = NoteAdapter(this)
+
+        binding.recyclerView.layoutManager = LinearLayoutManager(applicationContext)
+        binding.recyclerView.itemAnimator = DefaultItemAnimator()
+        binding.recyclerView.adapter = adapter
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -42,10 +49,19 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
-
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
+    fun createNewNote(n: Note) {
+        adapter.noteList.add(n)
+        adapter.notifyItemInserted(adapter.noteList.size-1)
+        saveNotes()
     }
+    fun deleteNote(index: Int) {
+        adapter.noteList.removeAt(index)
+        adapter.notifyItemRemoved(index)
+        saveNotes()
+    }
+    fun showNote(index: Int) {
+        val dialog = ShowNote(adapter.noteList[index], index)
+        dialog.show(supportFragmentManager, "")
+    }
+
 }
