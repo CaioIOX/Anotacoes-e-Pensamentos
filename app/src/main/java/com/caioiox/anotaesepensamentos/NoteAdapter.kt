@@ -18,7 +18,11 @@ class NoteAdapter(private val mainActivity: MainActivity): RecyclerView.Adapter<
             view.isClickable = true
             view.setOnClickListener(this)
         }
-        override fun Onclick(view: View){
+//        override fun Onclick(view: View){
+//
+//        }
+
+        override fun onClick(p0: View?) {
             mainActivity.showNote(layoutPosition)
         }
     }
