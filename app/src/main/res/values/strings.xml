@@ -1,31 +1,31 @@
 <resources>
     <string name="app_name">Anotações e Pensamentos</string>
-    <string name="action_settings">Settings</string>
-    <string name="title">Title</string>
-    <string name="contents">Contents</string>
-    <string name="cancel">Cancel</string>
-    <string name="delete">Delete</string>
+    <string name="action_settings">Configurações</string>
+    <string name="title">Título</string>
+    <string name="contents">Conteúdo</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete">Deletar</string>
     <string name="ok">OK</string>
 
-    <string name="add_dividers">Add dividing lines between notes?</string>
+    <string name="add_dividers">Adicionar linhas divisórias?</string>
 
-    <string name="add_new_note">Add a new note...</string>
-    <string name="note_empty">Check the title and contents fields are not empty</string>
-    <string name="note_saved">Note saved!</string>
-    <string name="note_deleted">Note deleted!</string>
+    <string name="add_new_note">Adicionar nova nota…</string>
+    <string name="note_empty">Verifique se o título ou o conteúdo não está vazio</string>
+    <string name="note_saved">Nota salva!</string>
+    <string name="note_deleted">Nota deletada!</string>
 
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="first_fragment_label">Primeiro fragmento</string>
+    <string name="second_fragment_label">Segundo fragmento</string>
+    <string name="next">Próximo</string>
+    <string name="previous">Anterior</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_settings">SettingsActivity</string>
 
     <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
+    <string name="messages_header">Mensagens</string>
     <string name="sync_header">Sync</string>
 
     <!-- Messages Preferences -->
@@ -38,5 +38,5 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    <string name="select_theme">Mudar tema</string>
+    <string name="select_theme">Tema noturno?</string>
 </resources>

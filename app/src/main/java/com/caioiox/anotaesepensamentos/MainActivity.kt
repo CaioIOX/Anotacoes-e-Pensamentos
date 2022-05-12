@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         private const val FILEPATH = "notes.json"
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -60,6 +61,8 @@ class MainActivity : AppCompatActivity() {
         adapter.notifyItemRangeInserted(0, adapter.noteList.size)
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+
+
     }
 
     override fun onStart() {
@@ -72,6 +75,7 @@ class MainActivity : AppCompatActivity() {
         val showDividingLines = sharedPreferences.getBoolean("dividingLines", false)
         if (showDividingLines) binding.recyclerView.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
         else if (binding.recyclerView.itemDecorationCount>0) binding.recyclerView.removeItemDecorationAt(0)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -157,5 +161,4 @@ class MainActivity : AppCompatActivity() {
         }
         return noteList
     }
-
 }

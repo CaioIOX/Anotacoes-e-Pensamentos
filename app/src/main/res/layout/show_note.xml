@@ -32,16 +32,20 @@
                 android:id="@+id/btnDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
                 android:text="@string/delete"
-                style="?android:attr/buttonBarButtonStyle"/>
+                android:clickable="true"
+                android:focusable="true" />
 
             <Button
                 android:id="@+id/btnOK"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
                 android:text="@string/ok"
                 android:layout_marginStart="30dp"
-                style="?android:attr/buttonBarButtonStyle"/>
+                android:clickable="true"
+                android:focusable="true" />
 
         </TableRow>
 

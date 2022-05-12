@@ -32,18 +32,22 @@
 
             <Button
                 android:id="@+id/btnCancel"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cancel"
-                style="?android:attr/buttonBarButtonStyle"/>
+                android:clickable="true"
+                android:focusable="true" />
 
             <Button
                 android:id="@+id/btnOK"
                 android:layout_width="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:text="@string/ok"
-                style="?android:attr/buttonBarButtonStyle"/>
+                android:clickable="true"
+                android:focusable="true" />
         </TableRow>
 
 

@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    android:layout_width="match_parent"
+<com.caioiox.anotaesepensamentos.DraggableCoordinatorLayout
+    android:id="@+id/parentContainer"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/parentContainer" >
+    android:layout_width="match_parent">
 
-
-
-<com.google.android.material.card.MaterialCardView
-    card_view:state_dragged="true"
-    android:layout_width="match_parent"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        card_view:state_dragged="true"
     android:layout_height="wrap_content"
     android:focusable="true"
-    android:clickable="true"
+
     android:layout_margin="10dp"
     card_view:cardElevation="2dp">
 
@@ -36,5 +35,5 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-</com.google.android.material.card.MaterialCardView>
-</androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
+</com.caioiox.anotaesepensamentos.DraggableCoordinatorLayout>
