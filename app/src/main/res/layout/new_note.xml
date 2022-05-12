@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="20dp"
             android:hint="@string/contents"
-            android:inputType="text"
+            android:inputType="textMultiLine"
             android:importantForAutofill="no"/>
 
         <TableRow

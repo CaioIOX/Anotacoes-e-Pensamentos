@@ -39,7 +39,7 @@ class SettingsActivity : AppCompatActivity() {
 
         override fun onPause() {
             super.onPause()
-            preferenceManager.sharedPreferences?.registerOnSharedPreferenceChangeListener(this)
+            preferenceManager.sharedPreferences?.unregisterOnSharedPreferenceChangeListener(this)
         }
 
         override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
